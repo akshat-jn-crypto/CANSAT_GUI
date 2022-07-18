@@ -88,27 +88,27 @@ void MainWindow::csvread()
         }
     }
 
-    for(int i=0; i<230; i++) {
-        buffer_split = plotTest[i].split("\r\n");
-        sensordata = buffer_split[0].split(",1077,");
-        element = buffer_split[0].split(",");
-        qDebug() << buffer_split[0];
-        setPrecision();
-        updateGraphArray(element);
-        updateContainerLabel(element);
-        updatePayloadLabel(element);
-        plot();
-        csvc(sensordata[0]);
-        csvp(sensordata[1]);
-        updateLed1(element[14]);
-        updateBar(ui->tempBar, element[21]);
-        locator.setData(element[10], element[11]);
+//     for(int i=0; i<230; i++) {
+//         buffer_split = plotTest[i].split("\r\n");
+//         sensordata = buffer_split[0].split(",1077,");
+//         element = buffer_split[0].split(",");
+//         qDebug() << buffer_split[0];
+//         setPrecision();
+//         updateGraphArray(element);
+//         updateContainerLabel(element);
+//         updatePayloadLabel(element);
+//         plot();
+//         csvc(sensordata[0]);
+//         csvp(sensordata[1]);
+//         updateLed1(element[14]);
+//         updateBar(ui->tempBar, element[21]);
+//         locator.setData(element[10], element[11]);
 
-    }
+//     }
 
-//    timer = new QTimer(this);
-//    connect(timer, SIGNAL(timeout()), this, SLOT(plotSec()));
-//    timer->start(1000);
+   timer = new QTimer(this);
+   connect(timer, SIGNAL(timeout()), this, SLOT(plotSec()));
+   timer->start(1000);
 }
 
 int loop1 = 0;
