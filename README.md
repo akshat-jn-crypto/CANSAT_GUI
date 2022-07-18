@@ -3,7 +3,7 @@ This repository contains codes for CanSat'22 Project by NASA where we build a sa
 ## Software Department
 Software Technology Used: Qt Creator for Open Source v5.9.9 <br>
 Language: C/C++ <br>
-Created by: Hardik Chhabra <br>
+Created by: AKSHAT JAIN<br>
 OS: Windows, MacOS
 
 ### Screenshot of GUI
